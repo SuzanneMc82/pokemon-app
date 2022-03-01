@@ -1,0 +1,47 @@
+@import '../../../core/variables';
+@import '../../../mixins/media-queries';
+@import '../../../mixins/rems';
+
+.site-header {
+    width: 100%;
+    background-size: cover;
+    background-position: bottom right;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+
+    background-image: url("/assets/pokemon-header-small.png");
+    min-height: 100px;
+
+    @media #{$mq-vp__medium} {
+        background-image: url("/assets/pokemon-header-med.png");
+        min-height: 162px;
+       
+    }
+    @media #{$mq-vp__large} {
+        background-image: url("/assets/pokemon-header-large.png");
+        min-height: 280px;
+        margin-bottom: 50px;
+
+        .container {position: relative;}
+    }
+
+    &__title {
+        @include rem(font-size, 22px);
+        margin: 0;
+        padding: 0;
+        position:absolute;
+        top: 20px;
+        left: 10px;
+        width: 140px;
+        height: 100%;
+
+        @media #{$mq-vp__medium} {
+            width: 275px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}

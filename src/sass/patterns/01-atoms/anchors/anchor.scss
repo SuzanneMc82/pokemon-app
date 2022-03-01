@@ -1,0 +1,15 @@
+@import '../../../core/variables';
+
+a {
+    color: $anchor-color;
+
+    &:hover,
+    &:focus {
+        color: $anchor-hover;
+    }
+
+    &:active,
+    &:visited {
+        color: $anchor-active;
+    } 
+}

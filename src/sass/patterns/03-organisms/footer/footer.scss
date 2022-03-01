@@ -1,0 +1,16 @@
+@import '../../../core/variables';
+@import '../../../mixins/media-queries';
+@import '../../../mixins/rems';
+
+.footer {
+    @include rem(padding, 20px 0px);
+    background: $brand-color-black;
+    
+    .copy-right-message {
+        @include rem(font-size, 14px);
+        margin: 0;
+        padding: 0;
+        text-align: right;
+        color: $brand-color-white;
+    }
+}

@@ -1,0 +1,20 @@
+/* ==========================================================================
+= Content Container
+= max width of website for content
+// ========================================================================== */
+
+@import '../core/variables';
+@import 'media-queries';
+
+@mixin content-container() {
+    margin: $auto;
+    padding-left: $grid__gutter;
+    padding-right: $grid__gutter;
+    max-width: $grid__max-width;
+    width: 100%; // flexbox
+
+    @media #{$mq-vp__medium} {
+        padding-left: $grid__gutter--large;
+        padding-right: $grid__gutter--large;
+    }
+}

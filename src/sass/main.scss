@@ -1,0 +1,34 @@
+// ================================
+// Main theme entry file
+// ================================
+
+// Theme baselines
+@import './core/normalize';
+@import './core/baseline'; 
+
+ // Theme global styling
+@import './utilities/layout/layout-utils';
+@import './utilities/flex/flex-utils';
+@import './utilities/text/text-utils';
+
+// 01. Atoms
+@import './patterns/01-atoms/anchors/anchor';
+@import './patterns/01-atoms/assets/assets';
+@import './patterns/01-atoms/icons/icons';
+@import './patterns/01-atoms/buttons/buttons';
+@import './patterns/01-atoms/radio-buttons/radio-buttons';
+@import './patterns/01-atoms/form-items/form-items';
+@import './patterns/01-atoms/typography/typography';
+@import './patterns/01-atoms/video/video';
+// 02. Molecules
+@import './patterns/02-molecules/video-theme/video-theme';
+@import './patterns/02-molecules/feature-resource/feature-resource';
+@import './patterns/02-molecules/cards/cards';
+@import './patterns/02-molecules/search/search';
+
+// 03. Organisms
+@import './patterns/03-organisms/header/header';
+@import './patterns/03-organisms/footer/footer';
+ 
+// @import '../app/pokemon/pokemon-list';
+// @import '../app/shared/header/header';

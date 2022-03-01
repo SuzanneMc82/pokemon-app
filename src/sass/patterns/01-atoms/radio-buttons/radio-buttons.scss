@@ -1,0 +1,53 @@
+@import '../../../core/variables';
+@import '../../../mixins/media-queries';
+@import '../../../mixins/rems';
+@import '../../../mixins/spacing';
+
+.radio {
+    @include spacing(margin-bottom, 1);
+
+    display: block;
+    position: relative;
+    text-align: center;
+
+    @media #{$mq-vp__medium} {
+        display: inline-block;
+        min-width: 125px;
+    }
+}
+
+.radio__btn {
+    position: absolute;
+    top: $zero;
+    right: $zero;
+    opacity: $zero;
+
+    &:hover,
+    &:focus {
+        & + .radio__label {
+            border-color: $brand-gray-26;
+        }
+    }
+
+    &:checked {
+        & + .radio__label {
+            background: $brand-color-primary;
+            color: $brand-color-white;
+            border-color: $brand-color-primary;
+        }
+    }
+}
+
+.radio__label {
+    @include rem(padding, 15px);
+
+    display: block;
+    position: relative;
+    background: $brand-color-white;
+    border: 1px solid $brand-color-black;
+    border-radius: 50px;
+    z-index: 1;
+    min-height: 22px;
+    line-height: 1.4;
+    cursor: pointer;
+}

@@ -1,0 +1,80 @@
+@import '../core/variables';
+@import 'media-queries';
+@import 'rems';
+
+@mixin text-primary() {
+    font-family: $brand__font-primary;
+    font-weight: normal;
+    font-style: normal;
+}
+@mixin text-primary-bold() {
+    font-family: $brand__font-primary--bold;
+    font-weight: bold;
+    font-style: normal;
+}
+@mixin text-secondary() {
+    font-family: $brand__font-secondary;
+    font-weight: normal;
+    font-style: normal;
+}
+@mixin text-secondary-bold() {
+    font-family: $brand__font-secondary--bold;
+    font-weight: bold;
+    font-style: normal;
+}
+// sass-lint:disable mixins-before-declarations
+@mixin header($heading-level) {
+    margin: $zero;
+    padding: $zero;
+    $font-size: $base-font-size-px !default;
+    $font-size--medium: 0 !default;
+    $line-height: 1.5 !default;
+    color: currentColor;
+
+    @if ($heading-level == 'h1') {
+        $font-size: $h1__font-size;
+        $line-height: 1;
+
+    } @else if ($heading-level == 'h2') {
+        $font-size: $h2__font-size;
+        $line-height: 1;
+
+    } @else if ($heading-level == 'h3') {
+        $font-size: $h3__font-size;
+
+    } @else if ($heading-level == 'h4') {
+        $font-size: $h4__font-size;
+
+    } @else if ($heading-level == 'h5') {
+        $font-size: $h5__font-size;
+
+    } @else if ($heading-level == 'h6') {
+        $font-size: $h6__font-size;
+    }
+
+    @include rem(font-size, $font-size);
+    line-height: $line-height;
+
+    @if $font-size--medium != 0 {
+        @media #{$mq-vp__medium} {
+            @include rem(font-size, $font-size--medium);
+        }
+   }
+}
+// sass-lint:enable mixins-before-declarations
+
+@mixin paragraph() {
+    @include rem(font-size, $base-font-size-px);
+    @include spacing(margin-bottom, 1);
+    margin-top: $zero;
+    padding: $zero;
+    color: currentColor;
+    font-family: $brand__font-primary;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+@mixin text-small() {
+    font-size: 75%;
+}

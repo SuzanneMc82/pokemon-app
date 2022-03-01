@@ -1,0 +1,132 @@
+@import '../../../core/variables';
+@import '../../../mixins/media-queries';
+@import '../../../mixins/rems';
+@import '../../../mixins/spacing';
+@import '../../../mixins/visually-hidden';
+@import '../../../mixins/typography';
+
+.text-primary {
+    @include text-primary();
+}
+
+.text-primary--bold {
+    @include text-primary-bold();
+}
+
+.text-secondary {
+    @include text-secondary();
+}
+
+.text-secondary--bold {
+    @include text-secondary-bold();
+}
+
+.text-center {
+    text-align: center;
+}
+
+.h1 {
+    @include header(h1);
+}
+
+.h2 {
+    @include header(h2);
+}
+
+.h3 {
+    @include header(h3);
+}
+
+.h4 {
+    @include header(h4);
+}
+
+.h5 {
+    @include header(h5);
+}
+
+.h6 {
+    @include header(h6);
+}
+
+.h--separator {
+    @include spacing(margin-bottom, 2);
+    @include spacing(padding-bottom, 0.5);
+    line-height: 1.5;
+    border-bottom: solid 1px $brand-color-primary;
+}
+
+.h--display {
+    @include rem(font-size, 64px);
+    text-transform: uppercase;
+}
+
+.highlight {
+    color: $brand-color-primary;
+}
+
+p {
+    @include paragraph();
+
+    code {
+        @include rem(font-size, 16px);
+        border: solid 1px $brand-gray-57;
+        background-color: $brand-gray-13;
+    }
+}
+
+a {
+    text-decoration: underline;
+    color: $brand-color-primary;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+
+}
+
+ul,
+ol {
+    li {
+        @include spacing(margin-bottom, 1);
+        color: inherit;
+        font-family: $brand__font-primary;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1.5;
+    }
+}
+
+address {
+    font-style: normal;
+    line-height: 1;
+}
+
+hr,
+.hr {
+    @include spacing(margin-top, 1);
+    @include spacing(margin-bottom, 2);
+    border: 0;
+    border-bottom: 1px solid $brand-gray-13;
+}
+
+blockquote,
+.blockquote {
+    @include rem(font-size, 40px);
+    @include spacing(margin, 0);
+    @include spacing(margin-bottom, 3);
+    display: block;
+    padding: 0;
+    color: $brand-gray-81;
+
+    &:before {
+        display: inline-block;
+        content: "\0201C";
+    }
+
+    &:after {
+        display: inline-block;
+        content: "\0201D";
+    }
+}

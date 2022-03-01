@@ -1,0 +1,15 @@
+/* ==========================================================================
+= Visually hidden
+= Hides content from view but not from assistive technology or SEO crawlers
+// ========================================================================== */
+@mixin visually-hidden() {
+    margin: -1px;  // sass-lint:disable-line variable-for-property
+    padding: $zero;
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}

@@ -1,0 +1,48 @@
+@import '../core/variables';
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before, // sass-lint:disable-line force-pseudo-nesting
+*:after {
+    // sass-lint:disable-line force-pseudo-nesting 
+    box-sizing: inherit;
+}
+ 
+body {
+    //https://davidwalsh.name/font-smoothing
+    // non-standard font smoothing decs
+    // -webkit-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes no-misspelled-properties
+    // -moz-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes no-misspelled-properties
+    // -o-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes no-misspelled-properties
+    font-smoothing: antialiased; // sass-lint:disable-line no-misspelled-properties
+    text-rendering: optimizeLegibility;
+    font-family: $brand__font-primary;
+    background: $brand-color-white;
+    color: $brand-gray-82;
+    line-height: 1;
+    font-size: 100%;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+input {
+    &[type='search'] {
+        box-sizing: border-box;
+    }
+}
+
+fieldset {
+    margin: $zero;
+    border: $zero;
+    padding: $zero;
+}
+
+legend {
+    white-space: normal;
+}

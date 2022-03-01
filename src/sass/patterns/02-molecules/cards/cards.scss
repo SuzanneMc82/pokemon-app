@@ -1,0 +1,264 @@
+@import '../../../core/variables';
+@import '../../../mixins/media-queries';
+@import '../../../mixins/rems';
+@import '../../../mixins/spacing';
+
+.pokedex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media #{$mq-vp__medium} {
+      width: 98%;
+      padding: 0 1%;        
+  }
+
+  &__item {
+    @include rem(margin-bottom, 33px);
+    @include rem(font-size, 18px);
+    width: 98%;
+    margin-left: 1%;  
+    margin-right: 1%; 
+
+    @media #{$mq-vp__medium} {
+      @include rem(margin-bottom, 40px);
+      width: 48%;         
+    }
+
+    @media #{$mq-vp__large} {
+      width: 30.6%;         
+    }
+
+    &--active {
+      .card-wrap .content{
+        transform: rotateY( 180deg ) ;
+        transition: transform 0.8s;
+      }
+    }
+  }
+}
+
+
+
+.card-wrap {
+  position:relative;
+  width: 100%;
+  min-height: 320px;
+  perspective: 500px;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+
+  &:active .content,
+  &:focus .content,
+  &:hover .content {
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+
+  .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+
+  .card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: $brand-color-white;
+    text-align: center;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    margin:0;
+    padding:0;
+    border: none;
+    border: 6px solid $brand-color-card-border;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .card-front {
+    &--bug {
+      background: radial-gradient($brand-color-white 1%, $brand-color-bug 90%);
+    }
+
+    &--water {
+      background: radial-gradient($brand-color-white 1%, $brand-color-water 90%);
+    }
+
+    &--grass {
+      background: radial-gradient($brand-color-white 1%, $brand-color-grass 90%);
+    }
+
+    &--fire {
+      background: radial-gradient($brand-color-white 1%, $brand-color-fire 90%);
+    }
+
+    &--normal {
+      background: radial-gradient($brand-color-white 1%, $brand-color-normal 90%);
+    }
+
+    &--psychic {
+      background: radial-gradient($brand-color-white 1%, $brand-color-psychic 90%);
+    }
+
+    &--rock {
+      background: radial-gradient($brand-color-white 1%, $brand-color-rock 90%);
+    }
+
+    &--poison {
+      background: radial-gradient($brand-color-white 1%, $brand-color-poison 90%);
+    }
+
+    &--ice {
+      background: radial-gradient($brand-color-white 1%, $brand-color-ice 90%);
+    }
+
+    &--fairy {
+      background: radial-gradient($brand-color-white 1%, $brand-color-fairy 90%);
+    }
+
+    &--ground {
+      background: radial-gradient($brand-color-white 1%, $brand-color-ground 90%);
+    }
+
+    &--dragon {
+      background: radial-gradient($brand-color-white 1%, $brand-color-dragon 90%);
+    }
+
+    &--electric {
+      background: radial-gradient($brand-color-white 1%, $brand-color-electric 90%);
+    }
+
+    &--ghost {
+      background: radial-gradient($brand-color-white 1%, $brand-color-ghost 90%);
+    }
+
+    &--fighting {
+      background: radial-gradient($brand-color-white 1%, $brand-color-fighting 90%);
+    }
+     
+    &__details {
+      position:absolute;
+      top:50%; 
+      left:50%; 
+      transform:translate(-50%, -50%); 
+      width:75%;
+
+      .img-wrap {
+        @include rem(margin, 0 auto 20px);
+        width: 100%;
+        background-color: rgba(225, 225, 225, 0.5);
+        border-radius: 5px;
+        box-shadow: 6px 6px 6px 0 rgba(0, 0, 0, 0.2);
+        border: 2px solid $brand-color-card-border;
+
+          img {
+            width: 35%;
+          }
+        }
+
+        h2 {
+          @include rem(margin-bottom, 10px );
+          @include rem(font-size, 18px);
+          line-height:1.4;
+          color:$brand-color-black;
+          font-weight:800;
+          text-transform: uppercase;
+  
+          @media #{$mq-vp__large} {
+              @include rem(font-size, 20px);
+          }
+      }
+    }
+  }
+
+  .card-back {
+    background: $brand-color-white;
+    color: $brand-color-black;
+    transform: rotateY( 180deg );
+
+    &__details {
+      position:absolute;
+      top:50%; 
+      left:50%; 
+      transform:translate(-50%, -50%); 
+      width:90%;
+      text-align: left;
+
+      h3 {
+        @include rem(margin-bottom, 10px);
+        @include rem(font-size, 18px);
+        line-height:1.4;
+        color:$brand-color-black;
+        font-weight:800;
+        text-transform: uppercase;
+      }
+
+      .detail-item {
+        @include rem(font-size, 16px);
+        text-transform: capitalize;
+        span {
+          line-height:1.4;
+          color:$brand-color-black;
+          font-weight:600;
+          text-transform: capitalize;
+          display: inline-block;
+          width: 35%;
+        }
+      }
+
+      .stat-wrap {
+        width: 100%;
+
+        h4 {
+          @include rem(margin-bottom, 10px);
+            @include rem(font-size, 16px);
+            line-height:1.4;
+            color:$brand-color-black;
+            font-weight:800;
+            text-transform: uppercase;
+        } 
+
+        .stat-list {
+          @include rem(font-size, 16px);
+          @include rem(padding, 10px 10px 5px);
+          margin: 0;
+          list-style: none;
+          line-height:1.4;
+          display: flex;
+          flex-wrap: wrap;
+          background: $brand-gray-06;
+          border-radius: 5px;
+
+          &__item {
+            @include rem(font-size, 14px);
+            @include rem(padding, 0 0 5px);
+            margin: 0;
+            list-style: none;
+            line-height:1.4;
+            width:50%;
+
+            span {
+              color:$brand-color-black;
+              font-weight:600;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

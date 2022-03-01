@@ -1,0 +1,71 @@
+@import '../../../core/variables';
+
+img {
+    border: $zero;
+    height: $auto;
+    vertical-align: middle;
+}
+
+object,
+embed,
+iframe,
+figure {
+    margin: $zero;
+    border: $zero;
+    outline: $zero;
+}
+
+.asset {
+    display: inline-block;
+    max-width: $percentage--100;
+
+    &--full {
+        display: block;
+        width: $percentage--100;
+    }
+
+    &--round {
+        border-radius: 50%;
+    }
+}
+
+.asset-embed {
+    position: relative;
+    display: block;
+    width: $percentage--100;
+
+    object,
+    embed,
+    iframe,
+    figure {
+        height: $percentage--100;
+        left: $zero;
+        position: absolute;
+        top: $zero;
+        width: $percentage--100;
+        z-index: 1;
+    }
+
+    &--4-3 {
+        padding-bottom: $ratio__4-3;
+    }
+
+    &--16-9 {
+        padding-bottom: $ratio__16-9;
+    }
+}
+
+.svg-asset {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    .icon--roundal & {
+        width: 35%;
+        height: 35%;
+        top: 35%;
+        left: 35%;
+    }
+}

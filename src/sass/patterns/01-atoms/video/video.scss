@@ -1,0 +1,33 @@
+@import '../../../core/variables';
+@import '../../../mixins/rems';
+
+.video-wrap {
+    margin:0;
+    padding: 0;
+    width: 100%;
+
+    .video {
+        display: block;
+        width: 100%;
+        position: relative;
+
+        .embed-container {
+            --video--width: 1296;
+            --video--height: 540;
+            position: relative;
+            padding-bottom: calc(var(--video--height) / var(--video--width) * 100%);
+            overflow: hidden;
+            max-width: 100%;
+            background: $brand-gray-06;
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+}

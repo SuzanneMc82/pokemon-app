@@ -1,0 +1,63 @@
+@import '../../core/variables';
+
+.v-text-base {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.v-text-caps {
+    text-transform: uppercase;
+}
+
+.v-text-bold {
+    font-weight: bold;
+}
+
+.v-text-normal {
+    text-transform: none;
+}
+
+.v-text-small {
+    font-size: 0.875rem;
+}
+
+.v-text-left {
+    text-align: left;
+}
+
+.v-text-right {
+    text-align: right;
+}
+
+.v-text-center {
+    text-align: center;
+}
+
+.v-text-inverted {
+    color: $brand-color-white;
+}
+
+.v-text-primary {
+    color: $brand-color-primary;
+}
+
+.v-text-error {
+    color: $brand-color-warning;
+}
+
+.v-text-grey-50 {
+    color: $brand-gray-57;
+}
+
+.v-text-size-x2 {
+    font-size: 200%;
+}
+
+.v-text-size-x3 {
+    font-size: 300%;
+}
+
+.v-break-word {
+    word-break: break-word;
+}

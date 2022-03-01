@@ -1,0 +1,23 @@
+/* ==========================================================================
+= Vertical Spacing
+= maintains vertical rhythm by using an incremented value, converts to REMS
+Usage ($spacing-increment: 15px)
+.my-class {
+  @include spacing(padding-bottom, 2);
+} 
+=>
+.my-class {
+  padding-bottom: 30px; 
+} 
+// ========================================================================== */
+
+
+@import '../core/variables';
+@import 'rems';
+
+@mixin spacing($declarations, $increment: 1) {
+
+    @each $declaration in $declarations {
+        @include rem($declaration, $spacing-increment * $increment);
+    }
+}

@@ -1,0 +1,304 @@
+@import '../../core/variables';
+@import '../../mixins/content-container';
+@import '../../mixins/grid-columns';
+@import '../../mixins/media-queries';
+@import '../../mixins/spacing';
+@import '../../mixins/visually-hidden';
+
+// Visibility vutils
+.v-aria-hide {
+    &[aria-hidden='true'] {
+        display: none;
+    }
+}
+
+.v-hidden {
+    display: none;
+}
+
+.v-hidden-medium {
+    @media #{$mq-vp__medium} { 
+        display: none;
+    }
+}
+
+.is-visually-hidden,
+.v-visually-hidden {
+    @include visually-hidden();
+}
+
+.v-narrow-is-visually-hidden {
+    @media #{$mq-vp__medium--max} {
+        @include visually-hidden();
+    }
+}
+
+.v-primary-highlight {
+    background: $brand-color-primary;
+    color: $brand-color-white;
+}
+
+// vertical spacing vutils
+.v-mb-0,
+.v-m-0 {
+    margin-bottom: $zero;
+}
+
+// Top margins
+.v-mt-0 {
+    @include spacing(margin-top, 0);
+}
+
+.v-mt-1 {
+    @include spacing(margin-top, 1);
+}
+
+.v-mt-2 {
+    @include spacing(margin-top, 2);
+}
+
+.v-mt-3 {
+    @include spacing(margin-top, 3);
+}
+
+.v-mt-4 {
+    @include spacing(margin-top, 4);
+}
+
+.v-mt-5 {
+    @include spacing(margin-top, 5);
+}
+
+.v-mt-6 {
+    @include spacing(margin-top, 6);
+}
+
+// Bottom margins
+.v-mb-1 {
+    @include spacing(margin-bottom, 1);
+}
+
+.v-mb-2 {
+    @include spacing(margin-bottom, 2);
+}
+
+.v-mb-3 {
+    @include spacing(margin-bottom, 3);
+}
+
+.v-mb-4 {
+    @include spacing(margin-bottom, 4);
+}
+
+.v-mb-5 {
+    @include spacing(margin-bottom, 5);
+}
+
+.v-mb-6 {
+    @include spacing(margin-bottom, 6);
+}
+
+// Left margins
+.v-ml-1 {
+    @include spacing(margin-left, 1);
+}
+
+.v-ml-2 {
+    @include spacing(margin-left, 2);
+}
+
+.v-ml-3 {
+    @include spacing(margin-left, 3);
+}
+
+.v-ml-4 {
+    @include spacing(margin-left, 4);
+}
+
+.v-ml-5 {
+    @include spacing(margin-left, 5);
+}
+
+.v-ml-6 {
+    @include spacing(margin-left, 6);
+}
+
+// Right margins
+.v-mr-1 {
+    @include spacing(margin-right, 1);
+}
+
+.v-mr-2 {
+    @include spacing(margin-right, 2);
+}
+
+.v-mr-3 {
+    @include spacing(margin-right, 3);
+}
+
+.v-mr-4 {
+    @include spacing(margin-right, 4);
+}
+
+.v-mr-5 {
+    @include spacing(margin-right, 5);
+}
+
+.v-mr-6 {
+    @include spacing(margin-right, 6);
+}
+
+// Top paddings
+.v-pt-0 {
+    @include spacing(padding-top, 0);
+}
+
+.v-pt-1 {
+    @include spacing(padding-top, 1);
+}
+
+.v-pt-2 {
+    @include spacing(padding-top, 2);
+}
+
+.v-pt-3 {
+    @include spacing(padding-top, 3);
+}
+
+.v-pt-4 {
+    @include spacing(padding-top, 4);
+}
+
+.v-pt-5 {
+    @include spacing(padding-top, 5);
+}
+
+.v-pt-6 {
+    @include spacing(padding-top, 6);
+}
+
+// Bottom paddings
+.v-pb-1 {
+    @include spacing(padding-bottom, 1);
+}
+
+.v-pb-2 {
+    @include spacing(padding-bottom, 2);
+}
+
+.v-pb-3 {
+    @include spacing(padding-bottom, 3);
+}
+
+.v-pb-4 {
+    @include spacing(padding-bottom, 4);
+}
+
+.v-pb-5 {
+    @include spacing(padding-bottom, 5);
+}
+
+.v-pb-6 {
+    @include spacing(padding-bottom, 6);
+}
+
+// Left paddings
+.v-pl-1 {
+    @include spacing(padding-left, 1);
+}
+
+.v-pl-2 {
+    @include spacing(padding-left, 2);
+}
+
+.v-pl-3 {
+    @include spacing(padding-left, 3);
+}
+
+.v-pl-4 {
+    @include spacing(padding-left, 4);
+}
+
+.v-pl-5 {
+    @include spacing(padding-left, 5);
+}
+
+.v-pl-6 {
+    @include spacing(padding-left, 6);
+}
+
+// Right paddings
+.v-pr-1 {
+    @include spacing(padding-right, 1);
+}
+
+.v-pr-2 {
+    @include spacing(padding-right, 2);
+}
+
+.v-pr-3 {
+    @include spacing(padding-right, 3);
+}
+
+.v-pr-4 {
+    @include spacing(padding-right, 4);
+}
+
+.v-pr-5 {
+    @include spacing(padding-right, 5);
+}
+
+.v-pr-6 {
+    @include spacing(padding-right, 6);
+}
+
+.v-display {
+    &--block {
+        display: block;
+    }
+
+    &--inline {
+        display: inline;
+    }
+
+    &--inline-block {
+        display: inline-block;
+    }
+
+    &--flex {
+        display: flex;
+    }
+}
+
+// Content container util
+.v-content-container {
+    @include content-container();
+
+    &--small {
+        max-width: $grid__max-width--slim;
+    }
+
+    &--medium {
+        max-width: $grid__max-width--medium;
+    }
+
+    &--wide {
+        max-width: 100%;
+    }
+}
+
+.v-narrow-sticky {
+    @media #{$mq-vp__medium__max} {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+}
+
+.v-overflow {
+    overflow: auto;
+}
+
+.v-keyline {
+    outline: 1px solid $brand-gray-81;
+}

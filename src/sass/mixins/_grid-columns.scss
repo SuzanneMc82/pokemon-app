@@ -1,0 +1,33 @@
+/* ==========================================================================
+= Span Cols
+= set the width by number of columns, 
+Usage 
+.my-class {
+  @include span-cols(3,4); 
+} 
+=>
+.my-class {
+  width: 75%; 
+} 
+// ========================================================================== */
+
+@mixin span-cols($span, $total) {
+    width: percentage($span / $total);
+}
+
+/* ==========================================================================
+= Col width
+= set the percentage of a declaration by the passed number of columns, 
+
+.my-class {
+  @include col-width(padding-bottom, 9, 16); 
+} 
+=>
+.my-class {
+  padding-bottom: 56.25%; 
+} 
+// ========================================================================== */
+
+@mixin col-width($declaration, $span, $total) {
+    #{$declaration}: percentage($span / $total);
+}

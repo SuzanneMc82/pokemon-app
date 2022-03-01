@@ -1,0 +1,46 @@
+/* ==========================================================================
+= Media Queries
+= Sets the Media query blocks by breakpoints passed in from variables folder 
+// ========================================================================== */
+@import '../core/variables';
+
+// = Viewport major breakpoints
+$vp__small : ( $breakpoint__small / $base-font-size ) * 1em; // 'mobile portrait'
+$vp__medium : ( $breakpoint__medium / $base-font-size ) * 1em; // 'tablet landscape'
+$vp__medium--max : ( ( $breakpoint__medium - 1 ) / $base-font-size ) * 1em; // 'tablet landscape'
+$vp__large : ( $breakpoint__large / $base-font-size ) * 1em; // 'Narrow desktop'
+$vp__large--max : ( ( $breakpoint__large - 1 ) / $base-font-size ) * 1em; // 'tablet landscape'
+$vp__max-site-width : ( $breakpoint__sitemax / $base-font-size ) * 1em;
+
+// - MIN width based parameters (default usage)
+// 'for anything bigger than this'
+$mq-vp__small : 'screen and (min-width: ' + $vp__small + ')';
+$mq-vp__medium : 'screen and (min-width:' + $vp__medium + ')';
+$mq-vp__large : 'screen and (min-width: ' + $vp__large + ')';
+$mq-vp__site-max : 'screen and (min-width: ' + $vp__max-site-width + ')';
+
+// - MAX width based
+// 'for anything smaller than this'
+$mq-vp__small--max : 'screen and (max-width: ' + $vp__small + ')';
+$mq-vp__medium--max : 'screen and (max-width:' + $vp__medium--max + ')';
+$mq-vp__large--max : 'screen and (max-width: ' + $vp__large + ')';
+
+//Minor Breakpoints, Module specific
+$mq-vp__max-site-width : 'screen and (min-width: ' + $vp__max-site-width + ')';
+
+/*
+```
+@USAGE
+body {
+  @media #{$mq-vp__small} {
+   background: red;
+  }
+  @media #{$mq-vp__medium} {
+   background: green; 
+  }
+  @media #{$mq-vp__large} {
+   background: pink;
+  }
+}
+```
+*/

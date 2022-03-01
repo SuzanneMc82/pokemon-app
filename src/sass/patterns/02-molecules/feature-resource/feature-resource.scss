@@ -1,0 +1,134 @@
+@import '../../../core/variables';
+@import '../../../mixins/media-queries';
+@import '../../../mixins/rems';
+@import '../../../mixins/spacing';
+
+
+.featured-resouce-wrap{
+    @include rem(margin-bottom, 33px);
+    @include rem(margin-top, 40px);
+    width:100%;
+    display:inline-block;
+    background:linear-gradient(192.93deg, #001F59 0%, #002F87 100%);padding:0;
+
+    @media #{$mq-vp__medium} {
+        @include rem(padding-top, 40px);
+        margin-top:0;
+
+        .featured-resouce:after{
+            content:" ";
+            visibility:hidden;
+            display:block;
+            height:0;
+            clear:both
+        }
+    }
+
+    @media #{$mq-vp__large} {
+        @include rem(margin-top, 60px);
+        @include rem(margin-bottom, 50px);
+        padding-top:0;
+    }
+
+    .featured-resouce{
+        width:100%;
+
+        &__copy-col{
+            width:100%;
+
+            @media #{$mq-vp__medium} {
+                float:left;
+                display:inline;
+                width:42%;
+            }
+        
+            @media #{$mq-vp__large} {
+                @include rem(padding-bottom, 0);
+                @include rem(padding-top, 25px);
+            }
+
+            &__header{
+                @include rem(margin-bottom, 11px);
+                @include rem(font-size, 10px);
+                line-height:1.4;
+                color:$brand-color-white;
+                text-transform:uppercase;
+                font-weight:800;
+                letter-spacing:0.83px;
+
+                @media #{$mq-vp__large} {
+                    @include rem(margin-bottom, 20px);
+                    @include rem(font-size, 12px);
+                }
+            }
+
+            &__sub-header{
+                @include rem(margin-bottom, 10px);
+                @include rem(font-size, 18px);
+                line-height:1.4;
+                color:$brand-color-white;
+                font-weight:800;
+
+                @media #{$mq-vp__large} {
+                    @include rem(font-size, 26px);
+                }
+            }
+
+            &__text{
+                width:100%;
+                padding-bottom:10px;
+                padding-bottom:.625rem;
+
+                p {
+                    @include rem(margin-bottom, 20px);
+                    @include rem(font-size, 14px);
+                    color:$brand-color-white;
+                    line-height:1.6;
+    
+                    @media #{$mq-vp__large} {
+                        @include rem(font-size, 18px);
+                    }
+                }
+            }
+        }
+
+        &__img-col{
+
+            @include rem(margin-bottom, 25px);
+            @include rem(margin-top, -40px);
+            width:100%;
+    
+            @media #{$mq-vp__medium} {
+                margin-top:0;
+                width:45%;
+                float:right;
+                display:inline;
+            }
+    
+            @media #{$mq-vp__large} {
+                @include rem(margin-top, -60px);
+            }
+    
+            img{
+                width:100%;
+                border-radius:5px;
+                box-shadow:6px 12px 15px 0 rgba(0,0,0,0.2)
+            }
+        }
+    }
+}
+
+
+
+    
+
+    
+    
+    
+
+    
+    
+
+
+
+

@@ -1,0 +1,129 @@
+// ================================
+// Site variables
+// ================================
+
+// ================================
+// 00 - Globals
+// ================================
+@import './variables/global';
+
+// Colors
+// ================================
+@import './variables/colors';
+
+// Brand colors
+$brand-color-primary: $named-color-red;
+$brand-color-secondary: $named-color-gray-82;
+$brand-color-tertiary: $named-color-green;
+
+// Neutral colors
+$brand-gray-06: $named-color-gray-06;
+$brand-gray-13: $named-color-gray-13;
+$brand-gray-26: $named-color-gray-26;
+$brand-gray-57: $named-color-gray-57;
+$brand-gray-81: $named-color-gray-81;
+$brand-gray-82: $named-color-gray-82;
+
+$brand-color-white: $named-color-white;
+$brand-color-black: $named-color-black;
+$brand-color-green: $named-color-green;
+$brand-header: #EF5350;
+
+// Utility colors
+$brand-color-success: $named-color-green;
+$brand-color-info: $named-color-blue;
+$brand-color-warning: $named-color-red;
+
+$brand-color-bug: $named-color-bug;
+$brand-color-water: $named-color-water;
+$brand-color-grass: $named-color-grass;
+$brand-color-fire: $named-color-fire; 
+$brand-color-normal: $named-color-normal; 
+$brand-color-psychic: $named-color-psychic;
+$brand-color-rock: $named-color-rock;
+$brand-color-poison: $named-color-poison;
+$brand-color-ice: $named-color-ice;
+$brand-color-fairy: $named-color-fairy;
+$brand-color-ground: $named-color-ground;
+$brand-color-dragon: $named-color-dragon;
+$brand-color-electric: $named-color-electric;
+$brand-color-ghost: $named-color-ghost; 
+$brand-color-fighting: $named-color-fighting;
+$brand-color-card-border: $named-color-card-border;
+
+// Fonts
+// ================================
+@import './variables/fonts';
+
+// base font sizes
+$base-font-size--small:                             $theme__base-font-size--small;
+$base-font-size--small-px:                          $theme__base-font-size--small * 1px;
+$base-font-size:                                    $theme__base-font-size;
+$base-font-size-px:                                 $base-font-size * 1px;
+$large-font-size:                                   $theme__large-font-size;
+$large-font-size-px:                                $large-font-size * 1px;
+
+// Typography
+// ===============================
+@import './variables/typography';
+$brand__font-primary:                                $theme__font-primary;
+$brand__font-primary--bold:                          $theme__font-primary--bold;
+$brand__font-secondary:                              $theme__font-secondary;
+$brand__font-secondary--bold:                        $theme__font-secondary--bold;
+
+// Headings
+$h1__font-size:                                     $theme-h1__font-size;
+$h2__font-size:                                     $theme-h2__font-size;
+$h3__font-size:                                     $theme-h3__font-size;
+$h4__font-size:                                     $theme-h4__font-size;
+$h5__font-size:                                     $theme-h5__font-size;
+$h6__font-size:                                     $theme-h6__font-size;
+
+// Major Breakpoints
+// ================================
+@import './variables/breakpoints';
+$breakpoint__small:                                 $theme__breakpoint--small;
+$breakpoint__medium:                                $theme__breakpoint--medium;
+$breakpoint__large:                                 $theme__breakpoint--large;
+$breakpoint__sitemax:                               $theme__breakpoint--sitemax;
+
+// = grid declarations, uses "mobile first" approach
+// ================================
+@import './variables/grid';
+$grid__columns:                                     $theme__grid--columns;
+$grid__margin:                                      $theme__grid--margin;
+$grid__gutter:                                      $theme__grid--gutter;
+$grid__gutter--half:                                $theme__grid--gutter / 2;
+$grid__gutter--half-negative:                       $theme__grid--gutter / -2;
+$grid__gutter--large:                               $theme__grid--gutter * 1.5;
+$grid__max-width:                                   $theme__max-width * 1px;
+$grid__max-width--slim:                             $theme__max-width--slim * 1px;
+$grid__max-width--medium:                           $theme__max-width--medium * 1px;
+$grid__max-width--wide:                             $theme__max-width--wide * 1px;
+
+$spacing-increment:                                 $theme__spacing-unit;
+
+// ================================
+// 01 - Atoms
+// ================================
+
+// Anchors
+// ================================
+$anchor-color: $brand-color-primary;
+$anchor-hover: lighten($brand-color-primary, 10%);
+$anchor-active: darken($brand-color-primary, 10%);
+
+// Buttons
+// ================================
+
+// Default
+$base-button-spacing-horizontal: 2;
+$base-button-spacing-vertical: 2;
+
+// Small
+$base-button-spacing-horizontal--small: 2;
+$base-button-spacing-vertical--small: 1;
+
+// Large
+$base-button-spacing-horizontal--large: 6;
+$base-button-spacing-vertical--large: 3;

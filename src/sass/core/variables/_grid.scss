@@ -1,0 +1,10 @@
+// = grid declarations, uses "mobile first" approach
+// whilst there are only 4 cols on narrow, 8 on medium the layout should be specified by spanning-columns
+$theme__max-width : 1190;
+$theme__max-width--slim : 630;
+$theme__max-width--medium : 960;
+$theme__max-width--wide : 1350;
+$theme__grid--columns : 12;
+$theme__spacing-unit : 8px;
+$theme__grid--margin : 30px;
+$theme__grid--gutter : $theme__spacing-unit * 2;

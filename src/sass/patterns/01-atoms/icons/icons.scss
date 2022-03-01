@@ -1,0 +1,95 @@
+@import '../../../core/variables';
+@import '../../../mixins/media-queries';
+
+@keyframes loadingRotation {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -120;
+    }
+}
+
+.icon {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    fill: currentColor;
+    z-index: 1;
+
+
+    &--small {
+        width: 20px;
+        height: 20px;
+    }
+
+    &--large,
+    .carousel__action & {
+        width: 25px;
+        height: 25px;
+
+        @media #{$mq-vp__medium} {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &--xtra-large {
+        width: 84px;
+        height: 84px;
+
+        @media #{$mq-vp__medium} {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    &--mega {
+        width: 100px;
+        height: 100px;
+
+        @media #{$mq-vp__medium} {
+            height: 150px;
+            width: 150px;
+        }
+    }
+
+    &--fluid {
+        width: 100%;
+        height: 0;
+        padding-bottom: $percentage--100;
+    }
+
+    &--roundal {
+        border: 2px solid currentColor;
+        border-radius: 50%;
+    }
+
+    &--medal {
+        border: solid 20px currentColor;
+        background-color: currentColor;
+        border-radius: 50%;
+        box-sizing: border-box;
+    }
+
+    &--stroke {
+        stroke: currentColor;
+        fill: none;
+    }
+
+    &--centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+.centered-icon-container {
+    position: relative;
+}
+ 

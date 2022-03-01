@@ -1,0 +1,48 @@
+@import '../../../core/variables';
+@import '../../../mixins/media-queries';
+@import '../../../mixins/rems';
+@import '../../../mixins/spacing';
+
+.pokemon-search-wrap {
+  background: #efefef;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  width: 100%;
+}
+.pokemon-search {
+  &__intro {
+    @include rem(margin, 0 0 20px);
+  }
+
+  &__form-item {
+    @include rem(margin, 0 0 20px);
+
+    label {
+      @include rem(margin, 0 0 10px);
+      width: 100%;
+      font-weight: bold;
+
+      @media #{$mq-vp__medium} {
+        @include rem(margin-right, 10px);
+        margin-bottom: 0;
+        width: auto;
+        display: inline-block;
+        margin-left: 2%;
+      }
+
+    input {
+      width: 100%;
+
+      @media #{$mq-vp__medium} {
+        margin-bottom: 0;
+        width: 40%;
+        display: inline-block;
+      }
+    }
+    }
+  }
+}
+
+
+
