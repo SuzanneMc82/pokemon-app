@@ -9,7 +9,7 @@
     "css:build": "node-sass ./src/styles.scss ./src/styles.css --output-style compressed",
     "css:watch": "onchange src/**/**/*.scss -- npm run css:build",
     "build": "npm run css:build && ng build",
-	"start": "ng serve"
+    "start": "ng serve"
   },
   "private": true,
   "dependencies": {
