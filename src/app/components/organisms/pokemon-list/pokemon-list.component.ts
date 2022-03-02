@@ -14,8 +14,8 @@ export class PokemonListComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
 
-  activateClass(subModule){
-    subModule.active = !subModule.active;    
+  activateClass(subModule) {
+    subModule.active = !subModule.active;
   }
 
   ngOnInit(): void  {
